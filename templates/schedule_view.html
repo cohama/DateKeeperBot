@@ -1,0 +1,24 @@
+﻿{% extends "_base.html" %}
+
+{% block navigation %}
+	<a href="../index.html">ホーム</a>
+{% endblock %}
+
+{% block content %}
+	{{header_message}}
+	<h3>スケジュール一覧</h3>
+	<table>
+		<tr>
+			<th>ユーザー</th>
+			<th>日時</th>
+			<th>用事</th>
+		</tr>
+		{% for schedule in schedule_list %}
+			<tr>
+				<td>{{schedule.user}}</td>
+				<td>{{schedule.date}}</td>
+				<td>{{schedule.todo}}</td>
+			</tr>
+		{% endfor %}
+	</table>
+{% endblock %}

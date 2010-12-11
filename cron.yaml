@@ -1,0 +1,5 @@
+﻿cron:
+- description: DateKeeperBot handling every 10 minutes
+  url: /DateKeeperBot/task
+  schedule: every 10 minutes
+  timezone: Asia/Tokyo

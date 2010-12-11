@@ -1,0 +1,20 @@
+﻿{% extends "_base.html" %}
+
+{% block navigation %}
+	<a href="DateKeeperBot/view">スケジュール管理 Bot</a>
+{% endblock %}
+
+{% block content %}
+	<p>
+		ようこそ。Welcome!
+	</p>
+	<div style="text-align: center;">
+		<img src="/static/miko.jpg" alt="トップ画像" />
+	</div>
+	
+	{% for test in test_list %}
+		<p>
+			{{test}}
+		</p>
+	{% endfor %}
+{% endblock %}
