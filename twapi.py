@@ -1,7 +1,6 @@
 ﻿import tweepy
 from google.appengine.ext import db
 
-
 class Keys(db.Model):
 	appli_name = db.StringProperty()
 	consum_key = db.StringProperty()
