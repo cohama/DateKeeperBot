@@ -10,13 +10,15 @@
 	<table>
 		<tr>
 			<th>ユーザー</th>
-			<th>日時</th>
+			<th>月</th>
+			<th>日</th>
 			<th>用事</th>
 		</tr>
 		{% for schedule in schedule_list %}
 			<tr>
 				<td>{{schedule.user}}</td>
-				<td>{{schedule.date}}</td>
+				<td>{{schedule.month}}</td>
+				<td>{{schedule.day}}</td>
 				<td>{{schedule.todo}}</td>
 			</tr>
 		{% endfor %}

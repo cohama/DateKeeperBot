@@ -12,7 +12,8 @@ class ScheduleViewerHandler(webapp.RequestHandler):
 			(now all user's schedule shown)
 		""" 
 		query = Schedule.all()
-		query.order('date')
+		query.order('month')
+		query.order('day')
 		schedule_list = query.fetch(limit=100)
 		
 		doRender(self, 'schedule_view.html', {'schedule_list':schedule_list})
